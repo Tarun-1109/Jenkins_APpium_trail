@@ -42,7 +42,7 @@ public class TC_01 extends capability{
 		//This is starting my appium server
 		service = startServer();
 		//what is the benifit of using implicity wait
-		AndroidDriver<AndroidElement> driver = HybridCapability(apppackage, appactivity, deviceName, chromeexcutable);
+		AndroidDriver<AndroidElement> driver = HybridCapability(apppackage, appactivity, deviceName,platformName, chromeexcutable);
 		//is to implement implicitwait 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
