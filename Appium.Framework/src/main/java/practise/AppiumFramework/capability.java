@@ -68,11 +68,11 @@ public class capability {
 		return isServerRunning;
 	}
 //	
-	public static void startEmulator() throws IOException, InterruptedException
-	{
-		Runtime.getRuntime().exec(System.getProperty("user.dir")+"//src//main//resources//Emulator.bat");
-		Thread.sleep(15000);
-	}
+//	public static void startEmulator() throws IOException, InterruptedException
+//	{
+//		Runtime.getRuntime().exec(System.getProperty("user.dir")+"//src//main//resources//Emulator.bat");
+//		Thread.sleep(15000);
+//	}
 
 	public static AndroidDriver<AndroidElement> HybridCapability(String apppackage, String appactivity, String deviceName, String platformName, String chromeexcutable) throws IOException, InterruptedException {
 		
@@ -85,10 +85,10 @@ public class capability {
 		platformName = pro.getProperty("platformName");
 		//this is something which i can pass at the run time 
 		//String device = System.getProperty("deviceName");
-	if(deviceName.contains("Tarun"))
-	{
-startEmulator();
-	}
+//	if(deviceName.contains("Tarun"))
+//	{
+//startEmulator();
+//	}
 		chromeexcutable = pro.getProperty("chromeexcutable");
 		DesiredCapabilities cap = new DesiredCapabilities();
 		//if you are using emulator--> provide device name as emulator
